@@ -45,7 +45,7 @@ public class BaseTest {
 		extent.setSystemInfo("HostName", "RHEL8");
 		extent.setSystemInfo("UserName", "root");
 		sparkReporter.config().setDocumentTitle("Automation Report");
-		sparkReporter.config().setReportName("Automation Tests Results by Manju");
+		sparkReporter.config().setReportName("Automation Tests Results by Shivam");
 	}
 
 	@BeforeMethod
