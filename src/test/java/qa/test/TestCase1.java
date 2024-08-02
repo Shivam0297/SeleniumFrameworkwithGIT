@@ -18,5 +18,10 @@ public class TestCase1 extends BaseTest{
 	  homePage.signinButton();
 	  loginPage.verifyLoginPageLoaded();
 	  loginPage.enterCredentials();
+	  
+	  
   }
+  
+
+  
 }
