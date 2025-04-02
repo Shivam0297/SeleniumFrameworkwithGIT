@@ -18,7 +18,7 @@ public class TestCase1 extends BaseTest{
   HomePageEvents homePage = new HomePageEvents();
   LoginPageEvents loginPage =  new LoginPageEvents();
   
-  @Test
+  @Test 
   public void sampleMethodforUI1() throws InterruptedException
   {
 	  homePage.loginButton();
@@ -26,14 +26,16 @@ public class TestCase1 extends BaseTest{
 	  Thread.sleep(2000);
 	  WebElement googletext= driver.findElement(By.xpath("//h5[text()='Google']"));
 	  homePage.scrollandfindElement(googletext);
+	  System.out.println(googletext);
 	  googletext.click();
+	  
 	  driver.findElement(By.xpath("//h2[text()='Google']")).isDisplayed();
 		/*
 		 * loginPage.verifyLoginPageLoaded(); loginPage.enterCredentials();
 		 */
   }
   
-  @Test
+  @Test(priority=1,dependsOnMethods="sampleMethodforUI1", alwaysRun=true)
   public void sampleMethodforUI2() throws InterruptedException
   {
 	  homePage.loginButton();
@@ -41,7 +43,9 @@ public class TestCase1 extends BaseTest{
 	  Thread.sleep(2000);
 	  WebElement apitext= driver.findElement(By.xpath("//h5[text()='API']"));
 	  homePage.scrollandfindElement(apitext);
+	  System.out.println(apitext);
 	  apitext.click();
+	  System.out.println(apitext);
 	  driver.findElement(By.xpath("//h2[text()='API']")).isDisplayed();
 		
   }
