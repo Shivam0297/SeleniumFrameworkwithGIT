@@ -13,6 +13,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -51,8 +52,9 @@ public class BaseTest {
 	@BeforeMethod
 	//Initializing the driver
 	@Parameters("browser") //will pass from TestNG.xml and accepting this parameter
-	public void beforeMethod(String browser, Method testMethod)
+	public void beforeMethod(@Optional String browser, Method testMethod)
 	{
+		
 		logger = extent.createTest(testMethod.getName());//get result log of each method/each test run in extent report
 		setupDriver(browser);// Initializing browser according to browser name
 		driver.manage().window().maximize(); //maximize the window
