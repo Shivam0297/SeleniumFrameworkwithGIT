@@ -9,8 +9,8 @@
     <classes>
       <class name="qa.test.TestCase1">
         <methods>
-          <include name="beforeTestMethod"/>
           <include name="afterMethod"/>
+          <include name="beforeTestMethod"/>
           <include name="afterTest"/>
           <include name="sampleMethodforEnteringCredentials"/>
           <include name="beforeMethod"/>

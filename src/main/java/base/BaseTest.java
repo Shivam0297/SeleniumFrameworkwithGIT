@@ -41,7 +41,7 @@ public class BaseTest {
 		sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + File.separator+"reports"+File.separator+"ShivamExtentReport.html");
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
-		sparkReporter.config().setTheme(Theme.STANDARD);
+		sparkReporter.config().setTheme(Theme.DARK);
 		extent.setSystemInfo("HostName", "RHEL8");
 		extent.setSystemInfo("UserName", "root");
 		sparkReporter.config().setDocumentTitle("Automation Report");

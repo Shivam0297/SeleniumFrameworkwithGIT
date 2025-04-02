@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-07-06T13:34:11 IST" name="Suite" finished-at="2024-07-06T13:34:34 IST" duration-ms="22996">
+    <groups>
+    </groups>
+    <test started-at="2024-07-06T13:34:11 IST" name="Test" finished-at="2024-07-06T13:34:34 IST" duration-ms="22996">
+      <class name="qa.test.TestCase1">
+        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:qa.test.TestCase1@3e8c3cb]" started-at="2024-07-06T13:34:11 IST" name="beforeTestMethod" finished-at="2024-07-06T13:34:12 IST" duration-ms="496" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.reflect.Method)[pri:0, instance:qa.test.TestCase1@3e8c3cb]" started-at="2024-07-06T13:34:12 IST" name="beforeMethod" finished-at="2024-07-06T13:34:20 IST" duration-ms="8077" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void qa.test.TestCase1.sampleMethodforEnteringCredentials()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="sampleMethodforEnteringCredentials()[pri:0, instance:qa.test.TestCase1@3e8c3cb]" started-at="2024-07-06T13:34:20 IST" name="sampleMethodforEnteringCredentials" finished-at="2024-07-06T13:34:32 IST" duration-ms="11876" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampleMethodforEnteringCredentials -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:qa.test.TestCase1@3e8c3cb]" started-at="2024-07-06T13:34:32 IST" name="afterMethod" finished-at="2024-07-06T13:34:32 IST" duration-ms="640" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=sampleMethodforEnteringCredentials status=SUCCESS method=TestCase1.sampleMethodforEnteringCredentials()[pri:0, instance:qa.test.TestCase1@3e8c3cb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:qa.test.TestCase1@3e8c3cb]" started-at="2024-07-06T13:34:32 IST" name="afterTest" finished-at="2024-07-06T13:34:34 IST" duration-ms="1770" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- qa.test.TestCase1 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
