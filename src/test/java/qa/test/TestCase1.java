@@ -19,7 +19,7 @@ public class TestCase1 extends BaseTest{
   LoginPageEvents loginPage =  new LoginPageEvents();
   
   @Test
-  public void sampleMethodforEnteringCredentials() throws InterruptedException
+  public void sampleMethodforUI1() throws InterruptedException
   {
 	  homePage.loginButton();
 	  homePage.clickonFeatureOption();
@@ -31,5 +31,18 @@ public class TestCase1 extends BaseTest{
 		/*
 		 * loginPage.verifyLoginPageLoaded(); loginPage.enterCredentials();
 		 */
+  }
+  
+  @Test
+  public void sampleMethodforUI2() throws InterruptedException
+  {
+	  homePage.loginButton();
+	  homePage.clickonFeatureOption();
+	  Thread.sleep(2000);
+	  WebElement apitext= driver.findElement(By.xpath("//h5[text()='API']"));
+	  homePage.scrollandfindElement(apitext);
+	  apitext.click();
+	  driver.findElement(By.xpath("//h2[text()='API']")).isDisplayed();
+		
   }
 }
