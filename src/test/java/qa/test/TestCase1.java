@@ -22,7 +22,7 @@ public class TestCase1 extends BaseTest{
   public void sampleMethodforUI1() throws InterruptedException
   {
 	  //homePage.loginButton();
-	  homePage.clickonFeatureOption();
+	  //homePage.clickonFeatureOption();
 	  Thread.sleep(2000);
 	  WebElement googletext= driver.findElement(By.xpath("//h5[text()='Google']"));
 	  homePage.scrollandfindElement(googletext);
