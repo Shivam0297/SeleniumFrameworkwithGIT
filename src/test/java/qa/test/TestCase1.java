@@ -21,8 +21,8 @@ public class TestCase1 extends BaseTest{
   @Test (priority=2)
   public void sampleMethodforUI1() throws InterruptedException
   {
-	  //homePage.loginButton();
-	  //homePage.clickonFeatureOption();
+	  homePage.loginButton();
+	  homePage.clickonFeatureOption();
 	  Thread.sleep(2000);
 	  WebElement googletext= driver.findElement(By.xpath("//h5[text()='Google']"));
 	  homePage.scrollandfindElement(googletext);
@@ -33,16 +33,19 @@ public class TestCase1 extends BaseTest{
 		 * loginPage.verifyLoginPageLoaded(); loginPage.enterCredentials();
 		 */
   }
-	/*
-	 * @Test(priority=1,dependsOnMethods="sampleMethodforUI1", alwaysRun=true)
-	 * public void sampleMethodforUI2() throws InterruptedException {
-	 * 
-	 * homePage.clickonFeatureOption(); Thread.sleep(2000); WebElement apitext=
-	 * driver.findElement(By.xpath("//h5[text()='API']"));
-	 * homePage.scrollandfindElement(apitext); System.out.println(apitext);
-	 * apitext.click(); System.out.println(apitext);
-	 * driver.findElement(By.xpath("//h2[text()='API']")).isDisplayed();
-	 * 
-	 * }
-	 */
+  
+  @Test(priority=1,dependsOnMethods="sampleMethodforUI1", alwaysRun=true)
+  public void sampleMethodforUI2() throws InterruptedException
+  {
+	  homePage.loginButton();
+	  homePage.clickonFeatureOption();
+	  Thread.sleep(2000);
+	  WebElement apitext= driver.findElement(By.xpath("//h5[text()='API']"));
+	  homePage.scrollandfindElement(apitext);
+	  System.out.println(apitext);
+	  apitext.click();
+	  System.out.println(apitext);
+	  driver.findElement(By.xpath("//h2[text()='API']")).isDisplayed();
+		
+  }
 }
