@@ -21,7 +21,7 @@ public class TestCase1 extends BaseTest{
   @Test (priority=2)
   public void sampleMethodforUI1() throws InterruptedException
   {
-	  homePage.loginButton();
+	  //homePage.loginButton();
 	  homePage.clickonFeatureOption();
 	  Thread.sleep(2000);
 	  WebElement googletext= driver.findElement(By.xpath("//h5[text()='Google']"));
