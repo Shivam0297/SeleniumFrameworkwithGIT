@@ -49,19 +49,34 @@ public class BaseTest {
 		sparkReporter.config().setReportName("Automation Tests Results by Shivam");
 	}
 
-	@BeforeMethod
-	//Initializing the driver
-	@Parameters("browser") //will pass from TestNG.xml and accepting this parameter
-	public void beforeMethod(@Optional String browser, Method testMethod)
-	{
-		
-		logger = extent.createTest(testMethod.getName());//get result log of each method/each test run in extent report
-		setupDriver(browser);// Initializing browser according to browser name
-		driver.manage().window().maximize(); //maximize the window
-		driver.get(Constants.url);//get the specific link of website to test
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-	}
 	
+	//Initializing the driver
+	//@Parameters("browser") //will pass from TestNG.xml and accepting this parameter
+	/*
+	 * public void beforeMethod(@Optional String browser, Method testMethod) {
+	 * 
+	 * logger = extent.createTest(testMethod.getName());//get result log of each
+	 * method/each test run in extent report setupDriver(browser);// Initializing
+	 * browser according to browser name driver.manage().window().maximize();
+	 * //maximize the window driver.get(Constants.url);//get the specific link of
+	 * website to test
+	 * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); }
+	 */
+	@BeforeMethod
+	@Parameters("browser")
+	public void beforeMethod(@Optional("chrome") String browser, Method testMethod) {
+	    logger = extent.createTest(testMethod.getName());
+	    
+	    if (browser == null || browser.isEmpty()) {
+	        browser = "chrome";  // Set a default browser to avoid null issues
+	    }
+	    
+	    setupDriver(browser);
+	    driver.manage().window().maximize();
+	    driver.get(Constants.url);
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+	}
+
 
 	@AfterMethod
 	//getting/capturing the extent report
